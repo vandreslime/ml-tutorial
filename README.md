@@ -27,4 +27,4 @@ If everything works you should be able to activate the Python environment by ent
 - install new dependency: `pip install sklearn`
 - save current installed dependencies back to requirements.txt: `pip freeze > requirements.txt`
 
-# python is cool
+# python is very cool
