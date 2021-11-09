@@ -16,11 +16,13 @@ decorator==5.1.0
 defusedxml==0.7.1
 entrypoints==0.3
 flake8==3.9.2
+Flask==2.0.2
 idna==3.2
 ipykernel==6.4.1
 ipython==7.27.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
+itsdangerous==2.0.1
 jedi==0.18.0
 Jinja2==3.0.1
 joblib==1.0.1
@@ -89,5 +91,6 @@ urllib3==1.26.6
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.2.1
+Werkzeug==2.0.2
 widgetsnbextension==3.5.1
 xgboost==1.4.2
