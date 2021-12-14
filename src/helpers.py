@@ -1,5 +1,5 @@
 def increment(counter):
-    counter += 2
+    counter += 1
     return counter
 
 
