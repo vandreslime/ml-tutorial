@@ -1,0 +1,12 @@
+name: model-training
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  model-training:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
