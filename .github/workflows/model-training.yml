@@ -18,3 +18,9 @@ jobs:
 
       - run: python src/train.py
         name: Train Model
+
+      - uses: actions/upload-artifact@v2
+        name: Upload Model
+        with:
+          name: baummethoden_lr.pickle
+          path: data/models/baummethoden_lr.pickle
