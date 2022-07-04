@@ -32,3 +32,4 @@ If everything works you should be able to activate the Python environment by ent
 Read the docs at https://flask.palletsprojects.com/en/2.1.x/quickstart/
 
 - run `python wsgi.py` or `flask run`
+  .
