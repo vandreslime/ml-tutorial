@@ -29,7 +29,7 @@ def hello_world():
 def get_training_data():
     return Response(training_data.to_json(), mimetype='application/json')
 
-
+# http://127.0.0.1:5000/predict?zylinder=2&ps=100&gewicht=200&beschleunigung=10&baujahr=2000
 @app.route("/predict", methods=["GET"])
 def predict():
     zylinder = request.args.get('zylinder')
@@ -38,7 +38,9 @@ def predict():
     beschleunigung = request.args.get('beschleunigung')
     baujahr = request.args.get('baujahr')
 
-    prediction = trained_model.predict([[zylinder, ps, gewicht, beschleunigung, baujahr]])
+    if (zylinder and ps and gewicht and beschleunigung and baujahr):
+        prediction = trained_model.predict([[zylinder, ps, gewicht, beschleunigung, baujahr]])
+        return {"result": prediction[0]}
 
-    return {"result": prediction[0]}
-
+    else:
+        return Response("Please provide all necessary parameters to get a pediction: zylinder, ps, gewicht, beschleunigung, baujahr", mimetype='application/json')
